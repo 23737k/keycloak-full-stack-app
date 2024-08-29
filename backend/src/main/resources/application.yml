@@ -1,0 +1,14 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: FilmApp
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/filmapp?createDatabaseIfNotExist=true
