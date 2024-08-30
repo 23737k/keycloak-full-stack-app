@@ -1,0 +1,16 @@
+<ol>
+@for (film of films; track film){
+  <li>
+    <div>{{film.title}}</div>
+    <div>{{film.description}}</div>
+    <div>{{film.genre}}</div>
+    <div>{{film.year}}</div>
+    <div>{{film.director}}</div>
+    <ul>
+      @for (actor of film.actors; track actor){
+        <li>{{actor}}</li>
+      }
+    </ul>
+  </li>
+}
+</ol>

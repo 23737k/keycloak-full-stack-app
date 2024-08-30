@@ -12,3 +12,10 @@ spring:
     username: root
     password:
     url: jdbc:mysql://localhost:3306/filmapp?createDatabaseIfNotExist=true
+
+
+# Configura SpringDoc para que el tipo de contenido predeterminado de las respuestas API sea 'application/json'.
+# Esto hace que en la especificación de OpenApi generada, se indique que el tipo de respuesta para todos los endpoints será de tipo JSON.
+# Sin esto, cuando la dependencia open-api-gen genere los métodos para consumir los endpoints, tratarán a la respuesta como BLOB por defecto en lugar de JSON
+springdoc:
+  default-produces-media-type: application/json
