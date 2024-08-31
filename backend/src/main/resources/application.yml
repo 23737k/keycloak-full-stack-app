@@ -13,6 +13,13 @@ spring:
     password:
     url: jdbc:mysql://localhost:3306/filmapp?createDatabaseIfNotExist=true
 
+  #Keycloak
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: "http://localhost:8181/realms/filmApp"
+
 
 # Configura SpringDoc para que el tipo de contenido predeterminado de las respuestas API sea 'application/json'.
 # Esto hace que en la especificación de OpenApi generada, se indique que el tipo de respuesta para todos los endpoints será de tipo JSON.
