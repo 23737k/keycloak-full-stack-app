@@ -35,4 +35,8 @@ export class KeycloakService {
     return this._keycloak;
   }
 
+  get token(): string | undefined{
+    return this._keycloak?.token;
+  }
+
 }
